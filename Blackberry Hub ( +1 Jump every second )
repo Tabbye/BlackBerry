@@ -1,0 +1,25 @@
+getgenv().Autofarm = false
+
+--geting th ui
+local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
+
+
+function aFarm() --name of this function
+    while getgenv().Autofarm == true do wait(1) --says while getgenv().autoclick == true, loop and fire our click remote
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(1211, 123475, 8272)
+    end
+end
+
+
+local Window = Library.CreateLib("Blackberry Hub", "Midnight") --UI title/Window and themes
+
+local Tab = Window:NewTab("AutoFarm") --creating the tab name
+
+local Section = Tab:NewSection("Autowin") -- creating the section name in the tab
+
+Section:NewToggle("Toggle", "This will Autofarm wins for you.", function(bool) --bool is basically toggle on
+    getgenv().Autofarm = bool 
+        if bool then --says if it = bool then fire our aClick() function we made up top
+        aFarm()
+    end
+end)
