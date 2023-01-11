@@ -5,7 +5,6 @@ getgenv().autoEgg2 = false
 getgenv().autoEgg3 = false
 getgenv().autoEgg4 = false
 getgenv().autoEgg5 = false
-getgenv().autoEgg6 = false
 
 --geting th ui
 local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
