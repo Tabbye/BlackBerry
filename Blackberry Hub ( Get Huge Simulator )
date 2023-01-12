@@ -1,0 +1,65 @@
+getgenv().autoStrength = false
+getgenv().autoSell = false
+getgenv().autoWeight = false
+
+--geting th ui
+local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
+
+
+function aStrength() --name of this function
+    while getgenv().autoStrength == true do wait() --says while getgenv().autoclick == true, loop and fire our click remote
+game:GetService("ReplicatedStorage").Remotes.LiftWeight:FireServer()
+
+    end
+end
+
+
+local Window = Library.CreateLib("Blackberry Hub", "Midnight") --UI title/Window and themes
+
+local Tab = Window:NewTab("Autofarm") --creating the tab name
+
+local Section = Tab:NewSection("Auto Strength") -- creating the section name in the tab
+
+Section:NewToggle("Toggle", "This will auto lift for you.", function(bool) --bool is basically toggle on
+    getgenv().autoStrength = bool 
+        if bool then --says if it = bool then fire our aClick() function we made up top
+        aStrength()
+    end
+end)
+
+local Section = Tab:NewSection("Auto Sell")
+function aSell() --name of this function
+    while getgenv().autoSell == true do wait() --says while getgenv().autoclick == true, loop and fire our click remote
+game:GetService("ReplicatedStorage").Remotes.SellStrengthRequest:FireServer()
+
+
+    end
+end
+Section:NewToggle("Toggle", "This will auto sell for you.", function(bool) --bool is basically toggle on
+    getgenv().autoSell = bool 
+        if bool then --says if it = bool then fire our aClick() function we made up top
+        aSell()
+    end
+end)
+
+local Section = Tab:NewSection("Auto Buy weights")
+function aWeight() --name of this function
+    while getgenv().autoWeight == true do wait() --says while getgenv().autoclick == true, loop and fire our click remote
+
+local args = {
+    [1] = "Weight",
+    [2] = "Islands"
+}
+
+game:GetService("ReplicatedStorage").Remotes.Shop.RequestBuyAll:InvokeServer(unpack(args))
+
+
+
+    end
+end
+Section:NewToggle("Toggle", "This will auto buy weights for you.", function(bool) --bool is basically toggle on
+    getgenv().autoWeight = bool 
+        if bool then --says if it = bool then fire our aClick() function we made up top
+        aWeight()
+    end
+end)
