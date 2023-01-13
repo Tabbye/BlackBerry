@@ -1,0 +1,29 @@
+getgenv().autoCollect = false
+
+--geting th ui
+local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
+
+
+function aCollect() --name of this function
+    while getgenv().autoCollect == true do wait(0) --says while getgenv().autoclick == true, loop and fire our click remote
+        local args = {
+    [1] = 50
+}
+
+game:GetService("ReplicatedStorage").Remote.Event.Game["[C-S]PlayerPick"]:FireServer(unpack(args))
+    end
+end
+
+
+local Window = Library.CreateLib("Blackberry Hub", "Midnight") --UI title/Window and themes
+
+local Tab = Window:NewTab("Autofarm") --creating the tab name
+
+local Section = Tab:NewSection("Auto collect") -- creating the section name in the tab
+
+Section:NewToggle("Toggle", "This will auto collect for you.", function(bool) --bool is basically toggle on
+    getgenv().autoCollect = bool 
+        if bool then --says if it = bool then fire our aClick() function we made up top
+        aCollect()
+    end
+end)
