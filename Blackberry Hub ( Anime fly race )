@@ -1,3 +1,5 @@
+key = "Test"
+if key == "Test" then
 getgenv().AutoCollect = false
 getgenv().AutoJump = false
 
@@ -51,3 +53,4 @@ Section:NewToggle("Toggle", "This will auto jump for you.", function(bool) --boo
         aJump()
     end
 end)
+else end
