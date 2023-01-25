@@ -1,0 +1,13 @@
+if game.PlaceId == 10446125875 then
+    loadstring(game:HttpGet("https://pastebin.com/raw/eZheMmHt"))()
+    elseif game.PlaceId == 11088884990 then
+    loadstring(game:HttpGet("https://pastebin.com/raw/5ZBeuaCx"))()
+    elseif game.PlaceId == 9834528893 then
+    loadstring(game:HttpGet("https://pastebin.com/raw/5ss6WuwR"))()
+    elseif game.PlaceId == 11547613362 then
+    loadstring(game:HttpGet("https://pastebin.com/PSPZeBwg"))()
+    elseif game.PlaceId == 4032944086 then
+    loadstring(game:HttpGet("https://pastebin.com/raw/syA89fBR"))()
+    elseif game.PlaceId == 11561748530 then 
+    loadstring(game:HttpGet("https://pastebin.com/raw/er99nZAf"))()
+end
