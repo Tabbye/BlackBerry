@@ -1,0 +1,29 @@
+local Rayfield = loadstring(game:HttpGet('https://raw.githubusercontent.com/shlexware/Rayfield/main/source'))()
+
+local Window = Rayfield:CreateWindow({
+    Name = "Blackberry Hub",
+    LoadingTitle = "Blackberry Hub",
+    LoadingSubtitle = "by Yoichi",
+
+    KeySystem = true, -- Set this to true to use our key system
+    KeySettings = {
+       Title = "Blackberry Hub",
+       Subtitle = "Blackberry Hub Key",
+       Note = "Join for key, copied (discord.gg/BrFaFgfX39)",
+       FileName = "",
+       SaveKey = false,
+       GrabKeyFromSite = true, -- If this is true, set Key below to the RAW site you would like Rayfield to get the key from
+       Key = "https://pastebin.com/raw/TLyAKFZ8"
+    }
+ })
+ setclipboard("https://discord.gg/BrFaFgfX39")
+
+ local Tab = Window:CreateTab("Get Script") -- Title, Image
+ local Section = Tab:CreateSection("CLICK TO EXECUTE SCRIPT")
+
+ local Button = Tab:CreateButton({
+    Name = "CLICK ME TO EXECUTE SCRIPT",
+    Callback = function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/Tabbye/BlackBerry/main/Game%20List"))()
+    end,
+ })
