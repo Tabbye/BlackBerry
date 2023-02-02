@@ -3,20 +3,20 @@ local Rayfield = loadstring(game:HttpGet('https://raw.githubusercontent.com/shle
 local Window = Rayfield:CreateWindow({
     Name = "Blackberry Hub",
     LoadingTitle = "Blackberry Hub",
-    LoadingSubtitle = "by Yoichi",
+    LoadingSubtitle = "by Conan",
 
     KeySystem = true, -- Set this to true to use our key system
     KeySettings = {
        Title = "Blackberry Hub",
        Subtitle = "Blackberry Hub Key",
-       Note = "Join for key, copied (discord.gg/BrFaFgfX39)",
+       Note = "Join for key, copied (https://discord.gg/E9FvpcsMZr)",
        FileName = "",
        SaveKey = false,
        GrabKeyFromSite = true, -- If this is true, set Key below to the RAW site you would like Rayfield to get the key from
        Key = "https://pastebin.com/raw/TLyAKFZ8"
     }
  })
- setclipboard("https://discord.gg/BrFaFgfX39")
+ setclipboard("https://discord.gg/E9FvpcsMZr")
 
  local Tab = Window:CreateTab("Get Script") -- Title, Image
  local Section = Tab:CreateSection("CLICK TO EXECUTE SCRIPT")
