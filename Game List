@@ -10,4 +10,6 @@ if game.PlaceId == 10446125875 then
     loadstring(game:HttpGet("https://pastebin.com/raw/syA89fBR"))()
     elseif game.PlaceId == 11561748530 then 
     loadstring(game:HttpGet("https://pastebin.com/raw/er99nZAf"))()
+    elseif game.PlaceId == 9358717212 then
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/Tabbye/BlackBerry/main/Raise%20a%20Pochita"))()
 end
