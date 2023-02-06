@@ -18,8 +18,8 @@ local Window = Rayfield:CreateWindow({
  })
  setclipboard("https://discord.gg/E9FvpcsMZr")
 
- local Tab = Window:CreateTab("Get Script") -- Title, Image
- local Section = Tab:CreateSection("CLICK TO EXECUTE SCRIPT")
+ local Tab = Window:CreateTab("Script Hub") -- Title, Image
+ local Section = Tab:CreateSection("Game Detector")
 
  local Button = Tab:CreateButton({
     Name = "CLICK ME TO EXECUTE SCRIPT",
