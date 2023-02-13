@@ -14,4 +14,6 @@ if game.PlaceId == 10446125875 then
     loadstring(game:HttpGet("https://raw.githubusercontent.com/Tabbye/BlackBerry/main/Raise%20a%20Pochita"))()
     elseif game.PlaceId == 6075756195 then
     loadstring(game:HttpGet("https://raw.githubusercontent.com/Tabbye/BlackBerry/main/Clicking%20Havoc"))()
+    elseif game.PlaceId == 7571274780 then
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/Tabbye/BlackBerry/main/Dimension%20Defenders"))()
 end
