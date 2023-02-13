@@ -1,0 +1,54 @@
+getgenv().autoSwing = false
+getgenv().autoWave = false
+
+--geting th ui
+local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
+
+
+function aSwing() --name of this function
+    while getgenv().autoSwing == true do wait() --says while getgenv().autoclick == true, loop and fire our click remote
+       
+       local args = {
+    [1] = 1
+}
+
+game:GetService("Players").LocalPlayer.Character:FindFirstChild("Wooden Sword").Event:FireServer(unpack(args))
+
+
+
+
+    end
+end
+
+
+local Window = Library.CreateLib("Blackberry Hub", "Midnight") --UI title/Window and themes
+
+local Tab = Window:NewTab("Autofarm") --creating the tab name
+
+local Section = Tab:NewSection("AutoSwing") -- creating the section name in the tab
+
+Section:NewToggle("Toggle", "This will auto swing for you.", function(bool) --bool is basically toggle on
+    getgenv().autoSwing = bool 
+        if bool then --says if it = bool then fire our aClick() function we made up top
+        aSwing()
+    end
+end)
+
+function aWave() --name of this function
+    while getgenv().autoWave == true do wait() --says while getgenv().autoclick == true, loop and fire our click remote
+
+game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("NextWave"):InvokeServer()
+
+
+
+
+    end
+end
+
+local Section = Tab:NewSection("AutoWave")
+Section:NewToggle("Toggle", "This will auto Start Wave for you.", function(bool) --bool is basically toggle on
+    getgenv().autoWave = bool 
+        if bool then --says if it = bool then fire our aClick() function we made up top
+        aWave()
+    end
+end)
