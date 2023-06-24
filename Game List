@@ -16,6 +16,8 @@ if game.PlaceId == 10446125875 then
     loadstring(game:HttpGet("https://raw.githubusercontent.com/Tabbye/BlackBerry/main/Clicking%20Havoc"))()
     elseif game.PlaceId == 7571274780 then
     loadstring(game:HttpGet("https://raw.githubusercontent.com/Tabbye/BlackBerry/main/Dimension%20Defenders"))()
+    elseif game.PlaceId == 9359839118 then
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/Tabbye/BlackBerry/main/Zach's%20Service%20Station"))()
     elseif game.PlaceId == 11430505281 then
     loadstring(game:HttpGet("https://raw.githubusercontent.com/Tabbye/BlackBerry/main/Anime%20Weapon%20Simulator"))()
 end
