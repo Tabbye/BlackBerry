@@ -19,11 +19,11 @@ local Window = Rayfield:CreateWindow({
  setclipboard("https://discord.gg/kS4PW98a9t")
 
  local Tab = Window:CreateTab("Black Berry Hub") -- Title, Image
- local Section = Tab:CreateSection("Script")
+ local Section = Tab:CreateSection("Blackberry Hub Script")
 
  local Button = Tab:CreateButton({
     Name = "CLICK ME TO EXECUTE SCRIPT",
     Callback = function()
-        https://raw.githubusercontent.com/Tabbye/BlackBerry/main/Game%20List
+        loadstring(game:HttpGet('https://raw.githubusercontent.com/Tabbye/BlackBerry/main/Game%20List'))()
     end,
  })
